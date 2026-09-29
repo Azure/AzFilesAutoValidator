@@ -23,7 +23,7 @@ version-indexing, gates, and VM provisioning are all reusable.
 
 | # | AzNFS-specific assumption | File / symbol | AzNFS value | azfilesauth value |
 |---|---|---|---|---|
-| 1 | Publisher list (Phase 1 discovery) | `scripts/config.py` -> `PUBLISHERS` | 6 publishers (below) | add any missing eligible publisher |
+| 1 | Publisher list (Phase 1 discovery) | `scripts/config.py` -> `PUBLISHERS` | 7 publishers (below) | add any missing eligible publisher |
 | 2 | Package directory + filename | `src/phase2/pmc_packages.py` -> `aznfs_dir_url()`, the `startswith("aznfs")` filter in `list_packages()`, `_AZNFS_VERSION_RE`, `file_arch()` | `pool/main/a/aznfs/`, files `aznfs_*` | `pool/main/a/azfilesauth/`, files `azfilesauth_*` |
 | 3 | Version series (which lineage is "latest") | `src/phase2/pmc_packages.py` -> `AZNFS_SERIES`, `in_series()` | `0.3` (tracks 0.3.x) | `1.0` (tracks 1.0.x) |
 | 4 | Supported-distro allow-list | `src/phase2/orchestrator.py` -> `_SUPPORTED_UBUNTU/_RHEL/_ROCKY/_SLES`, `_is_aznfs_supported_distro()` | Ubuntu/RHEL/Rocky/SLES set | the package's own matrix |
@@ -44,7 +44,7 @@ their versions. It does not know or care about aznfs. So "adding a package" does
 **not** require Phase 1 changes *unless* the new package supports a distro whose
 publisher is not being scanned yet.
 
-Current `scripts/config.py` -> `PUBLISHERS` (6):
+Current `scripts/config.py` -> `PUBLISHERS` (7):
 
 | Publisher (Marketplace API name) | Distro |
 |---|---|
