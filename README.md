@@ -169,7 +169,7 @@ Key properties:
 | | |
 |---|---|
 | Region | `eastus` |
-| Publishers | `Canonical`, `RedHat`, `SUSE`, `Debian`, `MicrosoftCBLMariner`, `resf` (Rocky) |
+| Publishers | `Canonical`, `RedHat`, `SUSE`, `Debian`, `MicrosoftCBLMariner`, `MicrosoftAzureLinux` (Azure Linux 4), `resf` (Rocky) |
 | Frequency | Daily, 03:30 UTC (plus manual dispatch) |
 | Recipients | `scripts/config.py` default list, overridable via the `NOTIFY_RECIPIENTS` repo variable |
 
@@ -358,7 +358,7 @@ released back to `unknown` on the next run.
    handed to Phase 3), so Phase 3 records the final verdict.
 
 The **AzNFS-supported distros** are: Ubuntu 18.04 / 20.04 / 22.04 / 24.04 / 26.04;
-RHEL 7 / 8 / 9 / 10; Rocky 8 / 9; SLES 15 / 16; Debian 13; Azure Linux 3.
+RHEL 7 / 8 / 9 / 10; Rocky 8 / 9; SLES 15 / 16; Debian 13; Azure Linux 3 / 4.
 
 ## Phase 3 — LISA validation
 

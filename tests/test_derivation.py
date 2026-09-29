@@ -37,6 +37,9 @@ from scan_marketplace import (derive_family_and_distro_label as derive,
         # Azure Linux / CBL-Mariner (Microsoft).
         ("MicrosoftCBLMariner", "azure-linux-3", "azure-linux-3-gen2",
          ("yum", "Azure Linux 3")),
+        # Azure Linux 4 has its own publisher; SKUs are bare "4" / "4-arm64".
+        ("MicrosoftAzureLinux", "azurelinux-4", "4", ("yum", "Azure Linux 4")),
+        ("MicrosoftAzureLinux", "azurelinux-4", "4-arm64", ("yum", "Azure Linux 4")),
         ("MicrosoftCBLMariner", "cbl-mariner", "cbl-mariner-2-gen2",
          ("yum", "CBL-Mariner 2")),
         ("MicrosoftCBLMariner", "cbl-mariner", "1-gen2", ("yum", "CBL-Mariner 1")),

@@ -28,6 +28,8 @@ PUBLISHERS = [
     "resf",
     # Microsoft's own distro: Azure Linux 3.x and CBL-Mariner 1.x/2.x.
     "MicrosoftCBLMariner",
+    # Azure Linux 4.x ships under its own publisher (offer azurelinux-4).
+    "MicrosoftAzureLinux",
 ]
 # NOTE: "OpenLogic" (the CentOS publisher) is intentionally NOT scanned. CentOS
 # 7/8 are EOL: the yum mirrors baked into those marketplace images

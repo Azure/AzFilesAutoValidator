@@ -53,7 +53,8 @@ Current `scripts/config.py` -> `PUBLISHERS` (6):
 | `RedHat` | RHEL |
 | `SUSE` | SLES |
 | `resf` | Rocky Linux |
-| `MicrosoftCBLMariner` | Azure Linux / CBL-Mariner |
+| `MicrosoftCBLMariner` | Azure Linux 3 / CBL-Mariner |
+| `MicrosoftAzureLinux` | Azure Linux 4 |
 
 **What to do for azfilesauth / AOD:** take each package's support matrix, list the
 distros it supports, and make sure every one of those distros has its publisher

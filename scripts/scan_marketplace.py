@@ -148,8 +148,9 @@ def derive_family_and_distro_label(
 
     # Azure Linux / CBL-Mariner family (Microsoft's own distro).
     # Uses RPM + tdnf, so it shares the "yum" repo family for Phase 2.
+    # Azure Linux 4 moved to its own publisher (MicrosoftAzureLinux).
     if (
-        p == "microsoftcblmariner"
+        p in ("microsoftcblmariner", "microsoftazurelinux")
         or "azure-linux" in o or "azurelinux" in o
         or "cbl-mariner" in o or "mariner" in o
     ):
