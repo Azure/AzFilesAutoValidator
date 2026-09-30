@@ -13,7 +13,7 @@ def test_publish_targets_mirror_packages_csv():
         "Rocky": {"8.0", "9.0"},
         "SUSE": {"15", "16"},
         "Debian": {"13"},
-        "Azure Linux": {"3.0"},
+        "Azure Linux": {"3.0", "4.0"},
     }
 
 
@@ -25,13 +25,13 @@ def test_scope_is_the_publish_targets_plus_their_bare_major():
     assert m.SUPPORTED_SLES == {"15", "16"}
     assert m.SUPPORTED_UBUNTU == {"18.04", "20.04", "22.04", "24.04", "26.04"}
     assert m.SUPPORTED_DEBIAN == {"13"}
-    assert m.SUPPORTED_AZURELINUX == {"3", "3.0"}
+    assert m.SUPPORTED_AZURELINUX == {"3", "3.0", "4", "4.0"}
 
 
 def test_releases_inside_the_matrix():
     for label in ("Ubuntu 22.04", "Ubuntu 26.04", "RHEL 9", "RHEL 9.0",
                   "Rocky 8", "Rocky 9.0", "SLES 15", "SLES 16", "Debian 13",
-                  "Azure Linux 3", "Azure Linux 3.0"):
+                  "Azure Linux 3", "Azure Linux 3.0", "Azure Linux 4", "Azure Linux 4.0"):
         assert m.is_supported_distro(label), label
 
 

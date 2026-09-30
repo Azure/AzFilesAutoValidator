@@ -35,6 +35,7 @@ three) edits:
    ```python
    PUBLISHERS = [
        "Canonical", "RedHat", "SUSE", "Debian", "resf", "MicrosoftCBLMariner",
+       "MicrosoftAzureLinux",
        "AlmaLinux",          # <-- new
    ]
    ```
